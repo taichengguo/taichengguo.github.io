@@ -82,15 +82,15 @@
                                 <tr>
                                     <td valign="top" style="width:33%; padding-right:10px; padding-bottom:10px;"><b>(1) <span style="background:linear-gradient(90deg,#e74c3c,#e67e22,#f1c40f,#27ae60,#2980b9,#8e44ad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Long-Horizon Agent Training:</span></b></td>
                                     <td valign="top" style="padding-bottom:10px;">
-                                        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><span><span style="color:#D2691E">MTSQL-R1</span> &#127381;</span> <span style="color:#888; font-size:0.78em; white-space:nowrap;">(ACL'26 Main)</span></div>
                                         <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><span><span style="color:#D2691E">AutoLLMResearch</span> &#127381;</span> <span style="color:#888; font-size:0.78em; white-space:nowrap;">(In Submission)</span></div>
+                                        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><span><span style="color:#D2691E">MTSQL-R1</span> &#127381;</span> <span style="color:#888; font-size:0.78em; white-space:nowrap;">(ACL'26 Main)</span></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td valign="top" style="width:33%; padding-right:10px; padding-bottom:10px;"><b>(2) <span style="background:linear-gradient(90deg,#e74c3c,#e67e22,#f1c40f,#27ae60,#2980b9,#8e44ad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Automated Recursive Self-Improvement / Systems:</span></b></td>
                                     <td valign="top" style="padding-bottom:10px;">
-                                        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><span style="color:#D2691E">MTSQL-R1</span> <span style="color:#888; font-size:0.78em; white-space:nowrap;">(ACL'26 Main)</span></div>
                                         <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><span style="color:#D2691E">AutoLLMResearch</span> <span style="color:#888; font-size:0.78em; white-space:nowrap;">(In Submission)</span></div>
+                                        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><span style="color:#D2691E">MTSQL-R1</span> <span style="color:#888; font-size:0.78em; white-space:nowrap;">(ACL'26 Main)</span></div>
                                         <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><span style="color:#D2691E">NeurIPS AutoML Competition</span> <span style="color:#888; font-size:0.78em; white-space:nowrap;">(NeurIPS 2nd Place &#129352;)</span></div>
                                     </td>
                                 </tr>
@@ -205,7 +205,7 @@
 
 
                 <p>
-                    <ol>
+                    <ol id="publist">
 
                             <li>
                           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -218,7 +218,11 @@
                             <a href="https://arxiv.org/abs/2605.11518"><b> AutoLLMResearch: Training Research Agents for Automating LLM Experiment Configuration - Learning from Cheap, Optimizing Expensive</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
                             <i><font color="#585251">In Submission</i></font><br>
-
+                            <div class="paperbox">
+                                <b>Problem:</b> Configuring large-scale LLM experiments is costly and expert-dependent; AutoML assumes cheap trials infeasible at LLM scale. <br>
+                                <b>Contribution:</b> An agentic framework + LLMConfig-Gym (multi-fidelity, 1M+ GPU-hours) casting config search as a long-horizon MDP. <br>
+                                <b>Key Insight:</b> Learn from cheap low-fidelity runs, extrapolate to optimize expensive high-fidelity ones.
+                            </div>
                             <a href="https://github.com/taichengguo/AutoLLMResearch">[Code]</a>
                             <img src="https://img.shields.io/github/stars/taichengguo/AutoLLMResearch"/>
 
@@ -240,6 +244,11 @@
                             <a href="https://arxiv.org/abs/2510.12831"><b> MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Hai Wang, ChaoChun Liu, Mohsen Golalikhani, Xin Chen, Xiangliang Zhang, Chandan K. Reddy.<br>
                             <i><font color="#585251">In ACL 2026 Main (Acceptance Rate 19%)</i></font><br>
+                            <div class="paperbox">
+                                <b>Problem:</b> Multi-turn Text-to-SQL is one-shot translation without execution feedback, giving non-executable queries. <br>
+                                <b>Contribution:</b> Agentic training as an MDP: propose, execute, verify, refine SQL. <br>
+                                <b>Key Insight:</b> Execution-based verification + dialogue memory enable self-correction over one-shot generation.
+                            </div>
 
                             <a href="https://github.com/taichengguo/MTSQL-R1">[Code]</a>
                             <img src="https://img.shields.io/github/stars/taichengguo/MTSQL-R1"/>
@@ -265,6 +274,11 @@
                             <a href="https://arxiv.org/abs/2402.01680"><b> Large Language Model based Multi-Agents: A Survey of Progress and Challenges.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Xiuying Chen, Yaqi Wang, Ruidi Chang, Shichao Pei, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
                             <i><font color="#585251">In IJCAI 2024 (Acceptance Rate 20%)</i></font><br>
+                            <div class="paperbox">
+                                <b>Problem:</b> LLM-based multi-agent systems lack a unified view of architectures, communication, and limits. <br>
+                                <b>Contribution:</b> A survey organizing them by agent profiling, communication, capability enhancement, and benchmarks. <br>
+                                <b>Key Insight:</b> LLM planning and reasoning enable multi-agent collaboration beyond single agents.
+                            </div>
 
                             <a href="https://github.com/taichengguo/LLM_MultiAgents_Survey_Papers">[Code]</a>
                             <img src="https://img.shields.io/github/stars/taichengguo/LLM_MultiAgents_Survey_Papers"/>
@@ -286,6 +300,11 @@
                             <a href="https://arxiv.org/abs/2310.04674"><b> ReactionTeam: Teaming Model Experts for Divergent Thinking Beyond Typical Reaction Patterns.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Changsheng Ma, Xiuying Chen, Bozhao Nan, Kehan Guo, Shichao Pei, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
                             <i><font color="#585251">In IEEE Conference on BigData 2025 Oral (Acceptance Rate 18%)</i></font><br>
+                            <div class="paperbox">
+                                <b>Problem:</b> Likelihood-maximizing models predict only the top outcome, ignoring reactions' stochastic nature. <br>
+                                <b>Contribution:</b> An ensemble of pattern-specialized experts plus a ranking expert for diverse predictions. <br>
+                                <b>Key Insight:</b> Emulating chemists' divergent thinking captures plausible rare outcomes single models miss.
+                            </div>
 
                             <a href="https://github.com/taichengguo/ReactionTeam">[Code]</a>
                             <img src="https://img.shields.io/github/stars/taichengguo/ReactionTeam"/>
@@ -306,6 +325,11 @@
                             <a href="https://arxiv.org/abs/2305.18365"><b> What can Large Language Models do in chemistry? A comprehensive benchmark on eight tasks.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Kehan Guo, Bozhao Nan, Zhenwen Liang, Zhichun Guo, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
                             <i><font color="#585251">In NeurIPS 2023 (Acceptance Rate 32%)</b></font><br>
+                            <div class="paperbox">
+                                <b>Problem:</b> LLMs' chemistry capabilities are poorly understood and unevaluated. <br>
+                                <b>Contribution:</b> A benchmark of eight chemistry tasks across five LLMs (zero-/few-shot). <br>
+                                <b>Key Insight:</b> LLM competence varies sharply by task; in-context learning is decisive.
+                            </div>
 
                             <a href="https://github.com/ChemFoundationModels/ChemLLMBench">[Code]</a>
                             <img src="https://img.shields.io/github/stars/ChemFoundationModels/ChemLLMBench"/>
@@ -326,6 +350,11 @@
                             <a href="https://dl.acm.org/doi/abs/10.1145/3543507.3583383"><b> Few-shot News Recommendation via Cross-lingual Transfer.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Lu Yu, Basem Shihada, Xiangliang Zhang.<br>
                             <i><font color="#585251">In the ACM Web Conference(WWW 2023 Oral) (Acceptance Rate 19%)</b></font><br>
+                            <div class="paperbox">
+                                <b>Problem:</b> Early-stage news platforms face cold-start with only a few interaction records. <br>
+                                <b>Contribution:</b> A cross-lingual transfer framework from data-rich to few-shot platforms. <br>
+                                <b>Key Insight:</b> News shares topics across languages, so cross-lingual transfer beats data scarcity.
+                            </div>
 
                             <a href="https://github.com/taichengguo/Few-shot-NewsRec">[Code]</a>
 
@@ -349,6 +378,11 @@
                             <a href="https://arxiv.org/abs/2410.19627"><b> Knowledge Graph Enhanced Language Agents for Recommendation</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Chaochun Liu, Hai Wang, Varun Mannam, Fang Wang, Xin Chen, Xiangliang Zhang, Chandan K. Reddy.<br>
                             <i><font color="#585251">In Submission</i></font><br>
+                            <div class="paperbox">
+                                <b>Problem:</b> Recommendation language agents miss user&ndash;item relationships, giving weak profiles. <br>
+                                <b>Contribution:</b> KGLA verbalizes knowledge-graph paths into the agent's user&ndash;item simulation. <br>
+                                <b>Key Insight:</b> KG paths expose the reasons behind user preferences.
+                            </div>
 
 <!--                            <a href="https://github.com/taichengguo/LLM_MultiAgents_Survey_Papers">[Code]</a>-->
 <!--                            <img src="https://img.shields.io/github/stars/taichengguo/LLM_MultiAgents_Survey_Pape/rs"/>-->
@@ -369,6 +403,11 @@
                             <a href="https://arxiv.org/abs/2402.18679"><b>Data Interpreter: An LLM Agent For Data Science.</b></a><br>
                             Sirui Hong, Yizhang Lin, ... <u><b>Taicheng Guo</b></u><br>
                             <i><font color="#585251">In ACL 2025 Findings</i></font><br>
+                            <div class="paperbox">
+                                <b>Problem:</b> LLM agents struggle with long-horizon, dynamic data-science workflows. <br>
+                                <b>Contribution:</b> Hierarchical graph task decomposition + programmable, self-refining code nodes. <br>
+                                <b>Key Insight:</b> Subgraph modeling adapts to evolving dependencies while verification boosts reliability.
+                            </div>
 
                             <a href="https://github.com/FoundationAgents/MetaGPT">[Code]</a>
                             <img src="https://img.shields.io/github/stars/FoundationAgents/MetaGPT"/>
