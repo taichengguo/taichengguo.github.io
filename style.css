@@ -43,8 +43,12 @@ ul {
 }
 
 img#headshot {
-    width: 125px;
+    width: 150px;
     border: 1px solid #222222;
+}
+
+#research-table td {
+    font-size: 13.5px;
 }
 
 li {
