@@ -51,8 +51,14 @@ img#headshot {
     font-size: 13.5px;
 }
 
-#publist > li {
+#publist > li,
+#awardlist > li {
     margin-bottom: 22px;
+}
+
+#awardlist {
+    list-style: none;
+    padding-left: 0;
 }
 
 .paperbox {
