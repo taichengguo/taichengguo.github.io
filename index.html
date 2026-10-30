@@ -72,14 +72,14 @@
                 </div>
 
                 <p>
-                    I'm currently an Applied Scientist on the Amazon Stores Foundation AI team, building and training the language agents behind Alexa for shopping assistant. I received my PhD in Computer Science and Engineering from the <a href="https://www.nd.edu">University of Notre Dame</a> in 2026, advised by <img src="img/like.svg" height="15px" /> Prof. <a href="https://sites.nd.edu/xiangliang-zhang/">Xiangliang Zhang</a>.
+                    I'm currently an Applied Scientist on the Amazon Stores Foundation AI team, building and training the language agents behind Alexa for shopping assistant (Rufus). I received my PhD in Computer Science and Engineering from the <a href="https://www.nd.edu">University of Notre Dame</a> in 2026, advised by <img src="img/like.svg" height="15px" /> Prof. <a href="https://sites.nd.edu/xiangliang-zhang/">Xiangliang Zhang</a>. I have shifted my focus to training intelligent agents for shopping and personalization and open-sourcing LLM-infra-related projects, with a greater emphasis on practical impact than paper-oriented research.
                 </p>
 
                 <p>
                    I study <span style="color:#D2691E">Agents</span> and <span style="color:#D2691E">Systems</span>, and how they <b>co-evolve</b> on the path to <b>superintelligence</b>:
                  </p>
                 <ul style="margin:6px 0 10px 0; padding-left:20px; line-height:1.7; list-style:none;">
-                    <li><b>(1) <span style="background:linear-gradient(90deg,#e74c3c,#e67e22,#f1c40f,#27ae60,#2980b9,#8e44ad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Long-Horizon Agentic Training for System</span></b> &mdash; how to train effective <b>long-horizon agents</b> for AI-System / Complex-Task Automation (Code Intelligence, Recursive Self-Improvement (RSI)).</li>
+                    <li><b>(1) <span style="background:linear-gradient(90deg,#e74c3c,#e67e22,#f1c40f,#27ae60,#2980b9,#8e44ad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Long-Horizon Agentic Training</span></b> &mdash; how to train effective <b>long-horizon agents</b> for AI-System / Complex-Task Automation.</li>
                     <li><b>(2) <span style="background:linear-gradient(90deg,#e74c3c,#e67e22,#f1c40f,#27ae60,#2980b9,#8e44ad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Agent-System Co-Design</span></b> &mdash; how agents and the systems they run on can be designed <b>jointly</b> to amplify each other.</li>
                 </ul>
                 <p>
@@ -229,11 +229,11 @@
 
                             <a href="https://arxiv.org/abs/2605.11518"><b> AutoLLMResearch: Training Research Agents for Automating LLM Experiment Configuration - Learning from Cheap, Optimizing Expensive</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
-                            <i><font color="#585251">In Submission</i></font><br>
+                            <i><font color="#585251">In Submission</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> Configuring large-scale LLM experiments is costly and expert-dependent; AutoML assumes cheap trials infeasible at LLM scale. <br>
-                                <b>Contribution:</b> An agentic framework + LLMConfig-Gym (multi-fidelity, 1M+ GPU-hours) casting config search as a long-horizon MDP. <br>
-                                <b>Key Insight:</b> Learn from cheap low-fidelity runs, extrapolate to optimize expensive high-fidelity ones.
+                                <b>Problem:</b> LLM configuration requires costly experiments and expert judgment. <br>
+                                <b>Contribution:</b> We train configuration agents in the multi-fidelity LLMConfig-Gym environment. <br>
+                                <b>General Key Insight:</b> Sim-to-real transfer: learn from cheap experiments to guide expensive real-world runs.
                             </div>
                             <a href="https://github.com/taichengguo/AutoLLMResearch">[Code]</a>
                             <img src="https://img.shields.io/github/stars/taichengguo/AutoLLMResearch"/>
@@ -255,11 +255,11 @@
   
                               <a href="https://arxiv.org/abs/2606.25207"><b> ASAP: Agent-System Co-Design for Wall-Clock-Centered Auto HPO Research for ML Experiments</b></a><br>
                               <u><b>Taicheng Guo</b></u>, Haomin Zhuang, Kehan Guo, Yujun Zhou, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
-                              <i><font color="#585251">In Submission</i></font><br>
+                              <i><font color="#585251">In Submission</font></i><br>
                               <div class="paperbox">
-                                  <b>Problem:</b> LLM-HPO methods deploy the LLM as a single-tool replacement bound to one inductive bias, and are judged on iteration count while ignoring the LLM/tool overhead that dominates real wall-clock. <br>
-                                  <b>Contribution:</b> ASAP, an agent-system co-design that (1) integrates a diverse pool of optimizers under one LLM-as-Judge, and (2) co-designs the prefix-stable prompt, speculation parallelism, and a Self-Tuner to cut wall-clock while preserving regret. <br>
-                                  <b>Key Insight:</b> Integration over replacement + wall-clock as the design objective — compose complementary biases and hide agent overhead under model evaluation.
+                                  <b>Problem:</b> LLM-based optimization often ignores orchestration overhead and tool diversity. <br>
+                                  <b>Contribution:</b> We co-design optimizer orchestration and execution for faster search. <br>
+                                  <b>General Key Insight:</b> Speculation can accelerate agent execution and improve end-to-end efficiency.
                               </div>
   
   
@@ -279,11 +279,11 @@
 
                             <a href="https://arxiv.org/abs/2510.12831"><b> MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Hai Wang, ChaoChun Liu, Mohsen Golalikhani, Xin Chen, Xiangliang Zhang, Chandan K. Reddy.<br>
-                            <i><font color="#585251">In ACL 2026 Main (Acceptance Rate 19%)</i></font><br>
+                            <i><font color="#585251">In ACL 2026 Main (Acceptance Rate 19%)</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> Multi-turn Text-to-SQL is one-shot translation without execution feedback, giving non-executable queries. <br>
-                                <b>Contribution:</b> Agentic training as an MDP: propose, execute, verify, refine SQL. <br>
-                                <b>Key Insight:</b> Execution-based verification + dialogue memory enable self-correction over one-shot generation.
+                                <b>Problem:</b> SQL generation often lacks feedback for correcting errors. <br>
+                                <b>Contribution:</b> We train SQL agents through execution and iterative refinement. <br>
+                                <b>General Key Insight:</b> Fine-grained credit assignment helps agents learn to correct themselves.
                             </div>
 
                             <a href="https://github.com/taichengguo/MTSQL-R1">[Code]</a>
@@ -309,11 +309,11 @@
 
                             <a href="https://arxiv.org/abs/2402.01680"><b> Large Language Model based Multi-Agents: A Survey of Progress and Challenges.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Xiuying Chen, Yaqi Wang, Ruidi Chang, Shichao Pei, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
-                            <i><font color="#585251">In IJCAI 2024 (Acceptance Rate 20%)</i></font><br>
+                            <i><font color="#585251">In IJCAI 2024 (Acceptance Rate 20%)</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> LLM-based multi-agent systems lack a unified view of architectures, communication, and limits. <br>
-                                <b>Contribution:</b> A survey organizing them by agent profiling, communication, capability enhancement, and benchmarks. <br>
-                                <b>Key Insight:</b> LLM planning and reasoning enable multi-agent collaboration beyond single agents.
+                                <b>Problem:</b> Multi-agent research lacks a unified framework. <br>
+                                <b>Contribution:</b> We survey agent design, communication, capabilities, and evaluation. <br>
+                                <b>General Key Insight:</b> Broaden the range of model predictions within the search space.
                             </div>
 
                             <a href="https://github.com/taichengguo/LLM_MultiAgents_Survey_Papers">[Code]</a>
@@ -335,11 +335,11 @@
 
                             <a href="https://arxiv.org/abs/2310.04674"><b> ReactionTeam: Teaming Model Experts for Divergent Thinking Beyond Typical Reaction Patterns.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Changsheng Ma, Xiuying Chen, Bozhao Nan, Kehan Guo, Shichao Pei, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
-                            <i><font color="#585251">In IEEE Conference on BigData 2025 Oral (Acceptance Rate 18%)</i></font><br>
+                            <i><font color="#585251">In IEEE Conference on BigData 2025 Oral (Acceptance Rate 18%)</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> Likelihood-maximizing models predict only the top outcome, ignoring reactions' stochastic nature. <br>
-                                <b>Contribution:</b> An ensemble of pattern-specialized experts plus a ranking expert for diverse predictions. <br>
-                                <b>Key Insight:</b> Emulating chemists' divergent thinking captures plausible rare outcomes single models miss.
+                                <b>Problem:</b> Single-model predictions overlook plausible alternative reaction outcomes. <br>
+                                <b>Contribution:</b> We combine specialized prediction experts with a ranking expert. <br>
+                                <b>General Key Insight:</b> Broaden the range of model predictions within the search space.
                             </div>
 
                             <a href="https://github.com/taichengguo/ReactionTeam">[Code]</a>
@@ -360,11 +360,11 @@
 
                             <a href="https://arxiv.org/abs/2305.18365"><b> What can Large Language Models do in chemistry? A comprehensive benchmark on eight tasks.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Kehan Guo, Bozhao Nan, Zhenwen Liang, Zhichun Guo, Nitesh V. Chawla, Olaf Wiest, Xiangliang Zhang.<br>
-                            <i><font color="#585251">In NeurIPS 2023 (Acceptance Rate 32%)</b></font><br>
+                            <i><font color="#585251">In NeurIPS 2023 (Acceptance Rate 32%)</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> LLMs' chemistry capabilities are poorly understood and unevaluated. <br>
-                                <b>Contribution:</b> A benchmark of eight chemistry tasks across five LLMs (zero-/few-shot). <br>
-                                <b>Key Insight:</b> LLM competence varies sharply by task; in-context learning is decisive.
+                                <b>Problem:</b> LLMs lack systematic evaluation in chemistry. <br>
+                                <b>Contribution:</b> We benchmark five LLMs across eight chemistry tasks. <br>
+                                <b>General Key Insight:</b> Capability depends on the task and prompting context.
                             </div>
 
                             <a href="https://github.com/ChemFoundationModels/ChemLLMBench">[Code]</a>
@@ -385,11 +385,11 @@
 
                             <a href="https://dl.acm.org/doi/abs/10.1145/3543507.3583383"><b> Few-shot News Recommendation via Cross-lingual Transfer.</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Lu Yu, Basem Shihada, Xiangliang Zhang.<br>
-                            <i><font color="#585251">In the ACM Web Conference(WWW 2023 Oral) (Acceptance Rate 19%)</b></font><br>
+                            <i><font color="#585251">In the ACM Web Conference(WWW 2023 Oral) (Acceptance Rate 19%)</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> Early-stage news platforms face cold-start with only a few interaction records. <br>
-                                <b>Contribution:</b> A cross-lingual transfer framework from data-rich to few-shot platforms. <br>
-                                <b>Key Insight:</b> News shares topics across languages, so cross-lingual transfer beats data scarcity.
+                                <b>Problem:</b> New news platforms lack user interaction data. <br>
+                                <b>Contribution:</b> We transfer recommendation knowledge across languages. <br>
+                                <b>General Key Insight:</b> Shared structure enables learning across data-rich and data-scarce settings.
                             </div>
 
                             <a href="https://github.com/taichengguo/Few-shot-NewsRec">[Code]</a>
@@ -413,11 +413,11 @@
 
                             <a href="https://arxiv.org/abs/2410.19627"><b> Knowledge Graph Enhanced Language Agents for Recommendation</b></a><br>
                             <u><b>Taicheng Guo</b></u>, Chaochun Liu, Hai Wang, Varun Mannam, Fang Wang, Xin Chen, Xiangliang Zhang, Chandan K. Reddy.<br>
-                            <i><font color="#585251">In KDD@RelSciFM</i></font><br>
+                            <i><font color="#585251">In KDD@RelSciFM</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> Recommendation language agents miss user&ndash;item relationships, giving weak profiles. <br>
-                                <b>Contribution:</b> KGLA verbalizes knowledge-graph paths into the agent's user&ndash;item simulation. <br>
-                                <b>Key Insight:</b> KG paths expose the reasons behind user preferences.
+                                <b>Problem:</b> Language agents miss important user-item relationships. <br>
+                                <b>Contribution:</b> We ground recommendation agents in knowledge-graph paths. <br>
+                                <b>General Key Insight:</b> Relational knowledge enriches an agent's context.
                             </div>
 
 <!--                            <a href="https://github.com/taichengguo/LLM_MultiAgents_Survey_Papers">[Code]</a>-->
@@ -438,11 +438,11 @@
 
                             <a href="https://arxiv.org/abs/2402.18679"><b>Data Interpreter: An LLM Agent For Data Science.</b></a><br>
                             Sirui Hong, Yizhang Lin, ... <u><b>Taicheng Guo</b></u><br>
-                            <i><font color="#585251">In ACL 2025 Findings</i></font><br>
+                            <i><font color="#585251">In ACL 2025 Findings</font></i><br>
                             <div class="paperbox">
-                                <b>Problem:</b> LLM agents struggle with long-horizon, dynamic data-science workflows. <br>
-                                <b>Contribution:</b> Hierarchical graph task decomposition + programmable, self-refining code nodes. <br>
-                                <b>Key Insight:</b> Subgraph modeling adapts to evolving dependencies while verification boosts reliability.
+                                <b>Problem:</b> Agents struggle with long, changing data-science workflows. <br>
+                                <b>Contribution:</b> We combine hierarchical task graphs with self-refining code. <br>
+                                <b>General Key Insight:</b> Adaptive planning and verification improve workflow reliability.
                             </div>
 
                             <a href="https://github.com/FoundationAgents/MetaGPT">[Code]</a>
@@ -585,7 +585,7 @@
 
 
                 <heading id="MISC"><font color="#B22222" size="4px">MISC</font></heading>
-                <li>Avid runner 🏃🏻, swimmer 🏊🏻  </li>
+                <li>Avid runner 🏃🏻, swimmer 🏊🏻, soccer player ⚽</li>
                 <li>Favorite books:  The Unbearable Lightness of Being, 1Q84.</li>
 
                 <hr />
