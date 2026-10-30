@@ -27,6 +27,24 @@ p {
     margin-bottom: 15px;
 }
 
+.personal-principles {
+    margin: 20px 0;
+    padding: 18px 22px;
+    border-left: 4px solid #c8a66a;
+    border-radius: 6px;
+    background: #3b5266;
+    color: #f5f7fa;
+}
+
+.personal-principles p {
+    margin: 0;
+}
+
+.personal-principles .principles-label {
+    color: #e3c58f;
+    font-weight: 700;
+}
+
 strong {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 17px
